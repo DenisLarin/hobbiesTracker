@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, SafeAreaView } from 'react-native'
+import { Navigator } from './navigator/Navigator'
 
 /**
  * @description - Root component of the application
@@ -8,10 +9,8 @@ import { View, Text, SafeAreaView } from 'react-native'
  */
 export const App = ({}) => {
   return (
-    <SafeAreaView>
-      <View>
-        <Text>App</Text>
-      </View>
-    </SafeAreaView>
+    <>
+      <Navigator />
+    </>
   )
 }
