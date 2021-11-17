@@ -5,11 +5,10 @@ import { SafeAreaProvider } from 'react-native-safe-area-context'
 
 /**
  * @description - Navigator component
- * @param props
  * @returns {JSX.Element}
  * @constructor
  */
-export const Navigator = ({ ...props }) => {
+export const Navigator = ({}) => {
   /**
    * @description - Get auth or unAuth navigators
    * @returns {JSX.Element}
@@ -21,12 +20,7 @@ export const Navigator = ({ ...props }) => {
       navigator = Router.AUTH_ROOT_NAVIGATOR_COMPONENT
     } else {
     }
-    console.log('navigator', navigator)
     return <>{navigator}</>
   }
-  return (
-    <SafeAreaProvider style={{ flex: 1 }}>
-      <NavigationContainer>{getNavigator()}</NavigationContainer>
-    </SafeAreaProvider>
-  )
+  return <NavigationContainer>{getNavigator()}</NavigationContainer>
 }

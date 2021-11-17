@@ -4,6 +4,11 @@ import { TrackersScreen } from '../../../screens/trackers/TrackersScreen'
 
 const TrackerStackNavigator = createNativeStackNavigator()
 
+/**
+ * @description - TrackerNavigator component.
+ * @return {JSX.Element}
+ * @constructor
+ */
 export const TrackerNavigator = () => {
   return (
     <TrackerStackNavigator.Navigator>
@@ -11,7 +16,8 @@ export const TrackerNavigator = () => {
         name="Trackers"
         component={TrackersScreen}
         options={{
-          headerShown: false,
+          headerLargeTitle: true,
+          title: 'Трекеры привычек',
         }}
       />
     </TrackerStackNavigator.Navigator>

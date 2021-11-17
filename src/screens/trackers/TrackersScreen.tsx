@@ -1,5 +1,8 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, ScrollView } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { Colors } from '../../core/Colors'
+import { Wrapper } from '../../components/wrapper/Wrapper'
 
 /**
  * @description - TrackersScreen screen
@@ -7,10 +10,14 @@ import { View, Text } from 'react-native'
  * @returns {JSX.Element}
  * @constructor
  */
-export const TrackersScreen = ({ ...props }) => {
+export const TrackersScreen = ({}) => {
   return (
-    <View>
-      <Text>Trackers</Text>
-    </View>
+    <Wrapper>
+      <ScrollView>
+        <View>
+          <Text>Hello world</Text>
+        </View>
+      </ScrollView>
+    </Wrapper>
   )
 }

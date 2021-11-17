@@ -1,6 +1,8 @@
 import React from 'react'
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text } from 'react-native'
 import { Navigator } from './navigator/Navigator'
+import { SafeAreaView, SafeAreaProvider } from 'react-native-safe-area-context'
+import { Colors } from './core/Colors'
 
 /**
  * @description - Root component of the application
@@ -9,8 +11,8 @@ import { Navigator } from './navigator/Navigator'
  */
 export const App = ({}) => {
   return (
-    <>
+    <SafeAreaView style={{ flex: 1 }}>
       <Navigator />
-    </>
+    </SafeAreaView>
   )
 }
